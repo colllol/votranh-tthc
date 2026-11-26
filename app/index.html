@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="Sách điện tử Thủ tục hành chính — UBND xã Vô Tranh, tỉnh Thái Nguyên. Tra cứu 416 thủ tục hành chính cấp xã.">
+<meta name="theme-color" content="#2563eb">
+<title>Sách điện tử Thủ tục hành chính — Xã Vô Tranh, Tỉnh Thái Nguyên</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-800:#1b47a8; --blue-700:#1e56c8; --blue-600:#2563eb; --blue-500:#3b82f6;
+    --blue-300:#93c5fd; --blue-200:#bfdbfe; --blue-100:#dbeafe; --blue-50:#eff6ff;
+    --ink:#0f2a5c; --slate:#475569; --muted:#64748b;
+    --amber-500:#f59e0b; --amber-400:#fbbf24;
+    --card:#fff; --border:#e2e8f0; --line:#eef2f7;
+    --radius-lg:22px; --radius-md:16px;
+    --shadow-sm:0 2px 8px rgba(30,86,200,.08);
+    --shadow-md:0 8px 24px rgba(30,86,200,.12);
+    --shadow-lg:0 16px 40px rgba(30,86,200,.16);
+    --fs:1;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{font-size:calc(16px * var(--fs));scroll-behavior:smooth}
+  body{
+    font-family:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif;
+    background:linear-gradient(160deg,#f0f6ff 0%,#fdfaf1 55%,#f0f9ff 100%);
+    color:var(--ink);min-height:100vh;display:flex;flex-direction:column;
+    -webkit-font-smoothing:antialiased;
+  }
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  a{color:inherit;text-decoration:none}
+
+  /* ================= HEADER ================= */
+  header.site-header{
+    position:sticky;top:0;z-index:60;
+    background:linear-gradient(120deg,#2f7bf6 0%,#2563eb 45%,#4f46e5 100%);
+    box-shadow:var(--shadow-lg);border-bottom:4px solid var(--amber-400);
+  }
+  .header-inner{max-width:1320px;margin:0 auto;padding:16px 24px 14px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .emblem{width:62px;height:62px;flex-shrink:0;border-radius:16px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);display:grid;place-items:center;padding:7px}
+  .emblem svg{width:100%;height:100%;display:block}
+  .title-block{flex:1 1 300px;min-width:230px}
+  .title-kicker{display:inline-block;background:rgba(255,255,255,.92);color:var(--blue-700);font-size:.68rem;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;padding:3px 11px;border-radius:999px;margin-bottom:6px}
+  .title-main{color:#fff;font-size:1.3rem;font-weight:800;line-height:1.3;letter-spacing:-.2px}
+  .title-main .highlight{color:#fde68a}
+  .title-sub{margin-top:3px;color:rgba(255,255,255,.85);font-size:.8rem;font-weight:500}
+
+  .header-tools{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .clock-pill{display:flex;flex-direction:column;align-items:flex-end;gap:1px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:7px 14px;color:#fff;min-width:132px}
+  #clock{font-family:'JetBrains Mono',monospace;font-size:1.18rem;font-weight:700;letter-spacing:.5px;line-height:1.1}
+  #date-line{font-size:.64rem;opacity:.9;text-transform:capitalize;white-space:nowrap}
+  .tool-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:9px 13px;color:#fff;font-size:.8rem;font-weight:600;transition:.18s}
+  .tool-pill:hover{background:rgba(255,255,255,.28);transform:translateY(-1px)}
+  .tool-pill svg{width:17px;height:17px}
+  .tool-pill.tel{background:#fff;color:var(--blue-700);border-color:#fff;font-weight:700}
+  .tool-pill.tel:hover{background:#fef3c7;color:#b45309}
+  .fs-group{display:flex;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:4px}
+  .fs-btn{width:34px;height:32px;border-radius:9px;color:#fff;font-weight:800;font-size:.8rem;display:grid;place-items:center;transition:.15s}
+  .fs-btn:hover{background:rgba(255,255,255,.25)}
+  .fs-btn:active{transform:scale(.94)}
+
+  /* ================= LAYOUT ================= */
+  main{flex:1;max-width:1320px;width:100%;margin:0 auto;padding:26px 24px 40px}
+  .view{display:none;animation:rise .32s cubic-bezier(.22,1,.36,1)}
+  .view.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .section-head{display:flex;align-items:center;gap:12px;margin:0 0 16px;flex-wrap:wrap}
+  .section-head h2{font-size:1.16rem;font-weight:800;letter-spacing:-.3px}
+  .section-head .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--blue-200),transparent)}
+  .section-head .count{background:var(--blue-50);color:var(--blue-700);border:1px solid var(--blue-100);font-size:.74rem;font-weight:700;padding:4px 11px;border-radius:999px}
+
+  /* ================= HERO ================= */
+  .hero{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:linear-gradient(125deg,#1e56c8 0%,#2563eb 42%,#4f46e5 100%);padding:34px 34px 32px;color:#fff;box-shadow:var(--shadow-lg);margin-bottom:26px}
+  .hero::before{content:"";position:absolute;right:-90px;top:-110px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 68%)}
+  .hero::after{content:"";position:absolute;left:-60px;bottom:-130px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(251,191,36,.22),transparent 70%)}
+  .hero-inner{position:relative;z-index:1;max-width:840px}
+  .hero h1{font-size:1.7rem;font-weight:800;line-height:1.26;letter-spacing:-.5px;margin-bottom:10px}
+  .hero h1 .hl{color:#fde68a}
+  .hero p{font-size:.93rem;line-height:1.62;color:rgba(255,255,255,.9);max-width:680px}
+  .hero-stats{display:flex;gap:26px;margin-top:20px;flex-wrap:wrap}
+  .hero-stat{display:flex;flex-direction:column}
+  .hero-stat b{font-size:1.5rem;font-weight:800;line-height:1;color:#fff}
+  .hero-stat span{font-size:.7rem;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.75);margin-top:4px}
+
+  /* ================= SEARCH ================= */
+  .search-box{position:relative;margin-bottom:24px}
+  .search-box svg.lens{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:21px;height:21px;color:var(--blue-500);pointer-events:none}
+  #search{width:100%;padding:17px 60px 17px 52px;border:2px solid var(--blue-100);border-radius:var(--radius-md);font-size:.98rem;font-family:inherit;font-weight:500;background:#fff;color:var(--ink);box-shadow:var(--shadow-sm);transition:.2s}
+  #search::placeholder{color:#9aa8bd;font-weight:400}
+  #search:focus{outline:none;border-color:var(--blue-500);box-shadow:0 0 0 4px rgba(59,130,246,.15)}
+  #search-clear{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;display:none;place-items:center;background:var(--blue-50);color:var(--blue-600);font-size:.85rem;font-weight:700}
+  #search-clear.on{display:grid}
+
+  /* ================= UTILITY GRID (10 thẻ) ================= */
+  .util-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:30px}
+  .util-card{display:flex;align-items:center;gap:13px;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius-md);padding:16px;box-shadow:var(--shadow-sm);transition:.2s cubic-bezier(.22,1,.36,1);min-height:80px;position:relative;overflow:hidden}
+  .util-card:hover{border-color:var(--blue-200);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+  .util-card:active{transform:translateY(-1px) scale(.995)}
+  .util-card .ico{width:46px;height:46px;flex-shrink:0;border-radius:11px;display:grid;place-items:center;background:var(--blue-50);color:var(--blue-600);border:1px solid #e6efff;transition:.2s}
+  .util-card .ico svg{width:23px;height:23px;stroke-width:1.9}
+  .util-card:hover .ico{background:var(--blue-100);color:var(--blue-700)}
+  .util-card .lbl{font-size:.885rem;font-weight:600;line-height:1.35;color:#0f172a;letter-spacing:-.15px;padding-right:8px}
+  .util-card .sub{display:block;font-size:.68rem;font-weight:500;color:var(--muted);margin-top:2px;letter-spacing:0;line-height:1.35}
+  .util-card .ext{position:absolute;top:8px;right:9px;font-size:.62rem;color:#94a3b8;font-weight:700}
+  .util-card.is-active{border:1.8px solid var(--blue-600);box-shadow:0 0 0 3px rgba(37,99,235,.1),var(--shadow-md)}
+  .util-card.is-active .ico{background:var(--blue-600);color:#fff;border-color:var(--blue-600)}
+
+  /* ================= SECTOR GRID ================= */
+  .sector-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:14px}
+  .sector-card{display:flex;align-items:center;gap:13px;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius-md);padding:16px;box-shadow:var(--shadow-sm);transition:.2s cubic-bezier(.22,1,.36,1)}
+  .sector-card:hover{border-color:var(--blue-200);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+  .sector-card .ico{width:44px;height:44px;flex-shrink:0;border-radius:12px;display:grid;place-items:center;background:var(--blue-50);color:var(--blue-600)}
+  .sector-card .ico svg{width:22px;height:22px;stroke-width:1.9}
+  .sector-card .txt{flex:1;min-width:0}
+  .sector-card .nm{font-size:.85rem;font-weight:700;line-height:1.3;color:#0f172a;display:block}
+  .sector-card .ct{font-size:.7rem;font-weight:600;color:var(--muted);margin-top:3px;display:block}
+  .sector-card .arw{color:#cbd5e1;font-size:1.1rem;font-weight:700;transition:.2s}
+  .sector-card:hover .arw{color:var(--blue-600);transform:translateX(3px)}
+
+  /* ================= BREADCRUMB / BACK ================= */
+  .crumbbar{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+  .btn-back{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1.5px solid var(--border);border-radius:11px;padding:9px 15px;font-size:.82rem;font-weight:700;color:var(--slate);box-shadow:var(--shadow-sm);transition:.18s}
+  .btn-back:hover{border-color:var(--blue-300);color:var(--blue-700);transform:translateX(-2px)}
+  .btn-back svg{width:15px;height:15px}
+  .crumb{font-size:.78rem;color:var(--muted);font-weight:500}
+  .crumb b{color:var(--ink);font-weight:700}
+
+  /* ================= PROCEDURE LIST ================= */
+  .proc-list{display:flex;flex-direction:column;gap:10px}
+  .proc-row{display:flex;align-items:flex-start;gap:14px;text-align:left;background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:15px 17px;transition:.16s;box-shadow:0 1px 3px rgba(15,42,92,.04)}
+  .proc-row:hover{border-color:var(--blue-200);background:#fcfdff;transform:translateX(3px);box-shadow:var(--shadow-sm)}
+  .proc-row .num{flex-shrink:0;min-width:38px;height:26px;border-radius:8px;background:var(--blue-50);color:var(--blue-700);font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;display:grid;place-items:center;margin-top:1px}
+  .proc-row .body{flex:1;min-width:0}
+  .proc-row .nm{font-size:.875rem;font-weight:600;line-height:1.45;color:#12233f;display:block}
+  .proc-row .meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}
+  .tag{font-size:.64rem;font-weight:700;padding:2.5px 8px;border-radius:6px;background:#f1f5f9;color:#64748b;letter-spacing:.2px;white-space:nowrap}
+  .tag.code{background:#eef4ff;color:#1e56c8;font-family:'JetBrains Mono',monospace;letter-spacing:0}
+  .tag.lvl{background:#ecfdf5;color:#047857}
+  .tag.sec{background:#fef3c7;color:#92400e}
+  .proc-row .go{color:#cbd5e1;font-size:1.15rem;font-weight:700;flex-shrink:0;align-self:center;transition:.16s}
+  .proc-row:hover .go{color:var(--blue-600);transform:translateX(3px)}
+
+  .empty{text-align:center;padding:56px 20px;background:#fff;border:1.5px dashed var(--blue-200);border-radius:var(--radius-md);color:var(--muted)}
+  .empty .em{font-size:2.2rem;margin-bottom:10px;opacity:.6}
+  .empty b{display:block;color:var(--ink);font-size:1rem;margin-bottom:6px}
+  .empty span{font-size:.85rem;line-height:1.6}
+
+  /* ================= DETAIL ================= */
+  .detail-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md)}
+  .detail-top{padding:26px 28px;background:linear-gradient(125deg,#1e56c8,#4f46e5);color:#fff;position:relative;overflow:hidden}
+  .detail-top::after{content:"";position:absolute;right:-70px;top:-90px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%)}
+  .detail-top .code{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.9rem;font-weight:700;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:5px 13px;border-radius:9px;letter-spacing:.5px;margin-bottom:12px;position:relative;z-index:1}
+  .detail-top h1{font-size:1.22rem;font-weight:800;line-height:1.42;letter-spacing:-.2px;position:relative;z-index:1}
+  .detail-body{padding:24px 28px 28px}
+  .kv{display:grid;grid-template-columns:190px 1fr;gap:0 20px;margin-bottom:22px}
+  .kv dt{font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;padding:11px 0;border-bottom:1px solid var(--line)}
+  .kv dd{font-size:.88rem;font-weight:600;color:#182b4a;padding:11px 0;border-bottom:1px solid var(--line);line-height:1.5}
+  .actions{display:flex;gap:11px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:12px;font-size:.86rem;font-weight:700;transition:.18s;border:1.5px solid transparent}
+  .btn svg{width:16px;height:16px}
+  .btn-primary{background:linear-gradient(125deg,#2563eb,#4f46e5);color:#fff;box-shadow:var(--shadow-md)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+  .btn-ghost{background:#fff;border-color:var(--border);color:var(--slate)}
+  .btn-ghost:hover{border-color:var(--blue-300);color:var(--blue-700);background:var(--blue-50)}
+  .notice{display:flex;gap:12px;background:#fffbeb;border:1px solid #fde68a;border-radius:13px;padding:14px 17px;margin-bottom:20px;font-size:.82rem;line-height:1.6;color:#78350f}
+  .notice svg{width:19px;height:19px;flex-shrink:0;margin-top:1px;color:#d97706}
+  .notice a{color:#b45309;font-weight:700;text-decoration:underline}
+
+  /* ================= GUIDE / PROSE ================= */
+  .prose{background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm)}
+  .prose h3{font-size:1rem;font-weight:800;margin:26px 0 12px;color:var(--ink);display:flex;align-items:center;gap:9px}
+  .prose h3:first-child{margin-top:0}
+  .prose h3 .n{width:26px;height:26px;flex-shrink:0;border-radius:8px;background:var(--blue-600);color:#fff;font-size:.78rem;display:grid;place-items:center;font-weight:800}
+  .prose p{font-size:.89rem;line-height:1.75;color:#334155;margin-bottom:11px}
+  .prose ul{margin:0 0 14px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .prose li{font-size:.87rem;line-height:1.62;color:#334155;padding-left:24px;position:relative}
+  .prose li::before{content:"";position:absolute;left:6px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--blue-500)}
+  .prose a{color:var(--blue-600);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+  .prose a:hover{color:var(--blue-800)}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0 18px}
+  .chip{background:var(--blue-50);border:1.5px solid var(--blue-100);color:var(--blue-700);padding:8px 15px;border-radius:999px;font-size:.8rem;font-weight:700;transition:.16s}
+  .chip:hover{background:var(--blue-600);color:#fff;border-color:var(--blue-600);transform:translateY(-1px)}
+
+  /* ================= ORG ================= */
+  .org-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(226px,1fr));gap:14px;margin-bottom:22px}
+  .org-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-sm);transition:.2s}
+  .org-card:hover{border-color:var(--blue-200);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+  .org-card .ico{width:44px;height:44px;border-radius:12px;background:var(--blue-50);color:var(--blue-600);display:grid;place-items:center;margin-bottom:13px}
+  .org-card .ico svg{width:22px;height:22px}
+  .org-card h4{font-size:.94rem;font-weight:800;margin-bottom:6px;color:#0f172a}
+  .org-card p{font-size:.78rem;line-height:1.6;color:var(--muted);margin-bottom:12px}
+  .org-card .lnk{font-size:.78rem;font-weight:700;color:var(--blue-600);display:inline-flex;align-items:center;gap:5px}
+  .org-card .lnk:hover{text-decoration:underline;text-underline-offset:2px}
+
+  /* ---------------- QR ---------------- */
+  .hero-qr{position:absolute;right:28px;top:50%;transform:translateY(-50%);z-index:3;background:#fff;border-radius:16px;padding:11px 11px 9px;text-align:center;box-shadow:0 14px 34px rgba(6,20,50,.3);width:172px}
+  .hero-qr .qr{width:150px;height:150px;margin:0 auto}
+  .hero-qr .qr img,.hero-qr .qr canvas{width:100%;height:100%;display:block}
+  .hero-qr b{display:block;font-size:.69rem;line-height:1.35;color:#0f2a5c;margin-top:7px;font-weight:800}
+  .hero-qr span{display:block;font-size:.6rem;color:#64748b;margin-top:1px}
+  @media (max-width:1200px){.hero-qr{display:none}}
+
+  .qr-card{display:flex;gap:18px;align-items:center;background:#f8fafc;border:1.5px dashed var(--blue-200);border-radius:var(--radius-md);padding:16px 18px;margin:4px 0 20px}
+  .qr-card .qr{width:126px;height:126px;flex-shrink:0;background:#fff;border-radius:10px;padding:5px;border:1px solid var(--border)}
+  .qr-card .qr img,.qr-card .qr canvas{width:100%;height:100%;display:block}
+  .qr-card .tx{min-width:0}
+  .qr-card .tx b{display:block;font-size:.89rem;color:#0f172a;margin-bottom:4px}
+  .qr-card .tx span{font-size:.77rem;color:var(--muted);line-height:1.6}
+  .qr-card .url{display:block;margin-top:6px;font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--blue-700);word-break:break-all}
+
+  /* ---------------- OFFICIALS ---------------- */
+  .off-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+  .off-tabs{display:flex;gap:8px;flex-wrap:wrap;flex:1 1 auto}
+  .off-tab{border:1.5px solid var(--border);background:#fff;border-radius:11px;padding:9px 14px;font:inherit;font-size:.79rem;font-weight:700;color:#334155;cursor:pointer;transition:.18s;display:inline-flex;gap:7px;align-items:center}
+  .off-tab .n{background:#eef2f7;color:#475569;border-radius:6px;padding:1px 6px;font-size:.68rem}
+  .off-tab:hover{border-color:var(--blue-200);color:var(--blue-700)}
+  .off-tab.on{background:var(--blue-600);border-color:var(--blue-600);color:#fff;box-shadow:0 6px 16px rgba(37,99,235,.26)}
+  .off-tab.on .n{background:rgba(255,255,255,.24);color:#fff}
+  .off-search{position:relative;flex:0 0 258px;max-width:100%}
+  .off-search input{width:100%;border:1.5px solid var(--border);border-radius:11px;padding:10px 13px 10px 35px;font:inherit;font-size:.81rem;outline:none;background:#fff}
+  .off-search input:focus{border-color:#93b4f5;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+  .off-search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#94a3b8}
+  .off-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(318px,1fr));gap:13px}
+  .off-card{display:flex;gap:14px;background:#fff;border:1.5px solid var(--border);border-radius:15px;padding:14px;box-shadow:var(--shadow-sm);transition:.18s}
+  .off-card:hover{border-color:var(--blue-200);box-shadow:var(--shadow-md)}
+  .off-photo{width:76px;height:96px;border-radius:9px;background:linear-gradient(160deg,#dbeafe,#bfdbfe);overflow:hidden;flex-shrink:0;display:grid;place-items:center;font-weight:800;color:var(--blue-700);font-size:1.15rem;letter-spacing:.5px}
+  .off-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .off-info{min-width:0;flex:1}
+  .off-name{font-size:.93rem;font-weight:800;color:#0f172a;line-height:1.3}
+  .off-role{font-size:.75rem;color:var(--blue-700);font-weight:700;margin-top:3px;line-height:1.45}
+  .off-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px;align-items:center}
+  .unit-chip{font-size:.65rem;font-weight:700;background:#eef4ff;color:#1e56c8;border-radius:6px;padding:2px 7px}
+  .off-meta .yr{font-size:.69rem;color:#64748b}
+  .off-links{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}
+  .off-links a{display:inline-flex;align-items:center;gap:5px;font-size:.71rem;font-weight:700;padding:5px 9px;border-radius:8px;border:1px solid var(--border);background:#fff;color:#334155;text-decoration:none}
+  .off-links a:hover{border-color:#a9c7f7;color:var(--blue-700);background:#f5f9ff}
+  .off-links a.tel{color:#b91c1c;border-color:#fecaca;background:#fff5f5}
+  .off-links a.tel:hover{background:#fee2e2;border-color:#fca5a5}
+
+  /* ---------------- EFORMS ---------------- */
+  .ef-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(298px,1fr));gap:12px}
+  .ef-card{display:flex;flex-direction:column;gap:9px;background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:15px;box-shadow:var(--shadow-sm);transition:.18s}
+  .ef-card:hover{border-color:var(--blue-200);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+  .ef-card .top{display:flex;gap:10px;align-items:flex-start}
+  .ef-card .ico{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;flex-shrink:0}
+  .ef-card .ico svg{width:19px;height:19px}
+  .ef-card h4{font-size:.86rem;font-weight:800;color:#0f172a;line-height:1.4}
+  .ef-card .doc{font-size:.7rem;color:#64748b;line-height:1.5}
+  .ef-card .go{display:flex;gap:7px;margin-top:2px}
+  .ef-card .go button{flex:1;border:1.5px solid var(--border);background:#fff;border-radius:9px;padding:7px 6px;font:inherit;font-size:.73rem;font-weight:700;color:#334155;cursor:pointer}
+  .ef-card .go button.main{background:var(--blue-600);border-color:var(--blue-600);color:#fff}
+  .ef-card .go button:hover{border-color:#a9c7f7;color:var(--blue-700);background:#f5f9ff}
+  .ef-card .go button.main:hover{background:var(--blue-700);border-color:var(--blue-700);color:#fff}
+
+  .ef-sheet{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:32px 38px 40px;max-width:920px;margin:0 auto;box-shadow:var(--shadow-sm)}
+  .ef-sheet .qhead{text-align:center;font-size:.78rem;line-height:1.45;font-weight:700;margin-bottom:6px;color:#0f172a}
+  .ef-sheet .qhead b{display:block;font-size:.9rem;letter-spacing:.4px}
+  .ef-sheet h3{text-align:center;font-size:1.02rem;text-transform:uppercase;letter-spacing:.3px;margin:12px 0 3px;color:#0f172a}
+  .ef-sheet .doc{text-align:center;font-size:.71rem;color:#64748b;margin-bottom:20px;font-style:italic}
+  .ef-rows{border-top:1px solid #cbd5e1}
+  .ef-row{display:grid;grid-template-columns:repeat(12,1fr);border-bottom:1px solid #e2e8f0}
+  .ef-cell{padding:9px 10px;border-right:1px solid #e2e8f0;min-width:0}
+  .ef-cell:last-child{border-right:none}
+  .ef-lbl{font-size:.67rem;font-weight:700;color:#475569;display:block;margin-bottom:5px;line-height:1.4}
+  .ef-val{font-size:.8rem;color:#94a3b8;min-height:15px}
+  .ef-sign{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px;text-align:center;font-size:.76rem;color:#334155}
+  .ef-sign b{display:block;margin-bottom:56px;font-size:.78rem}
+  .ef-sign i{font-style:italic;font-size:.69rem;color:#94a3b8}
+  .ef-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+  .ef-toolbar .sp{flex:1 1 auto}
+  @media print{
+    .ef-toolbar,.ef-note{display:none!important}
+    .ef-sheet{box-shadow:none;border:none;padding:0;max-width:none}
+  }
+
+  /* ================= CHATBOT ================= */
+  .chat-wrap{background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);overflow:hidden;display:flex;flex-direction:column;height:min(66vh,620px)}
+  .chat-head{padding:16px 22px;background:linear-gradient(125deg,#1e56c8,#4f46e5);color:#fff;display:flex;align-items:center;gap:12px;flex-shrink:0}
+  .chat-head .av{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.18);display:grid;place-items:center;flex-shrink:0}
+  .chat-head .av svg{width:22px;height:22px}
+  .chat-head b{font-size:.94rem;font-weight:800;display:block}
+  .chat-head span{font-size:.69rem;opacity:.85}
+  .chat-body{flex:1;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:12px;background:#fbfcff}
+  .msg{max-width:86%;padding:12px 16px;border-radius:15px;font-size:.855rem;line-height:1.62}
+  .msg.bot{align-self:flex-start;background:#fff;border:1.5px solid var(--border);border-bottom-left-radius:5px;color:#1e293b;box-shadow:0 1px 3px rgba(15,42,92,.05)}
+  .msg.user{align-self:flex-end;background:linear-gradient(125deg,#2563eb,#4f46e5);color:#fff;border-bottom-right-radius:5px;box-shadow:var(--shadow-sm)}
+  .msg b{font-weight:800}
+  .msg .hits{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+  .msg .hit{background:var(--blue-50);border:1px solid var(--blue-100);border-radius:9px;padding:8px 11px;font-size:.77rem;font-weight:600;color:var(--blue-800);text-align:left;transition:.15s;line-height:1.4}
+  .msg .hit:hover{background:var(--blue-600);color:#fff;border-color:var(--blue-600)}
+  .chat-foot{padding:13px 18px;border-top:1.5px solid var(--border);display:flex;gap:10px;background:#fff;flex-shrink:0}
+  #chat-input{flex:1;padding:13px 17px;border:1.5px solid var(--border);border-radius:12px;font-size:.86rem;font-family:inherit;font-weight:500;min-width:0}
+  #chat-input:focus{outline:none;border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+  #chat-send{width:48px;height:48px;border-radius:12px;background:linear-gradient(125deg,#2563eb,#4f46e5);color:#fff;display:grid;place-items:center;flex-shrink:0;box-shadow:var(--shadow-sm)}
+  #chat-send svg{width:19px;height:19px}
+  #chat-send:active{transform:scale(.95)}
+
+  /* ================= SURVEY ================= */
+  .survey-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-md);max-width:780px}
+  .survey-q{margin-bottom:26px}
+  .survey-q .q{font-size:.94rem;font-weight:700;margin-bottom:13px;color:#0f172a}
+  .rate-row{display:flex;gap:10px;flex-wrap:wrap}
+  .rate{display:flex;flex-direction:column;align-items:center;gap:6px;padding:13px 18px;border:1.5px solid var(--border);border-radius:13px;background:#fff;transition:.16s;min-width:82px}
+  .rate:hover{border-color:var(--blue-300);background:var(--blue-50);transform:translateY(-2px)}
+  .rate.on{border-color:var(--blue-600);background:var(--blue-50);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+  .rate .em{font-size:1.45rem;line-height:1}
+  .rate .tx{font-size:.68rem;font-weight:700;color:var(--slate)}
+  textarea#survey-note{width:100%;padding:14px 17px;border:1.5px solid var(--border);border-radius:13px;font-family:inherit;font-size:.86rem;resize:vertical;min-height:96px;line-height:1.6}
+  textarea#survey-note:focus{outline:none;border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+
+  /* ================= HOTLINE ================= */
+  .hotline-bar{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:30px;background:linear-gradient(125deg,#fffbeb,#fef3c7);border:1.5px solid #fde68a;border-radius:var(--radius-lg);padding:22px 26px;box-shadow:var(--shadow-sm)}
+  .hotline-bar .ico{width:52px;height:52px;border-radius:14px;background:#f59e0b;color:#fff;display:grid;place-items:center;flex-shrink:0;box-shadow:0 4px 14px rgba(245,158,11,.35)}
+  .hotline-bar .ico svg{width:26px;height:26px}
+  .hotline-bar .txt{flex:1 1 260px;min-width:190px}
+  .hotline-bar .txt b{display:block;font-size:.96rem;font-weight:800;color:#78350f;margin-bottom:3px}
+  .hotline-bar .txt span{font-size:.79rem;color:#92400e;line-height:1.5;display:block}
+  .hotline-bar .num{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:#b45309;letter-spacing:.5px;padding:10px 20px;background:#fff;border-radius:12px;border:1.5px solid #fde68a;box-shadow:var(--shadow-sm)}
+
+  /* ================= FOOTER ================= */
+  footer.site-footer{background:#0b1f45;color:#c7d5ea;padding:34px 24px 20px;margin-top:auto}
+  .foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px}
+  .foot-brand .nm{color:#fff;font-size:.95rem;font-weight:800;line-height:1.45;margin-bottom:8px}
+  .foot-brand p{font-size:.78rem;line-height:1.75;color:#93a8c7}
+  .foot-brand b{color:#fff}
+  .foot-col h5{color:#fff;font-size:.77rem;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px}
+  .foot-col a{display:block;font-size:.78rem;color:#93a8c7;padding:4px 0;transition:.15s;line-height:1.5}
+  .foot-col a:hover{color:#fbbf24;transform:translateX(3px)}
+  .foot-bottom{max-width:1320px;margin:26px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.71rem;color:#6b82a6}
+  .foot-bottom .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,.15);color:#34d399;padding:3px 10px;border-radius:999px;font-weight:700;white-space:nowrap}
+
+  /* ================= IDLE ================= */
+  #idle{position:fixed;inset:0;z-index:200;background:rgba(8,23,52,.82);backdrop-filter:blur(9px);display:none;place-items:center;padding:24px}
+  #idle.on{display:grid}
+  .idle-box{background:#fff;border-radius:24px;padding:38px 42px;text-align:center;max-width:430px;box-shadow:0 30px 80px rgba(0,0,0,.4);animation:pop .3s cubic-bezier(.22,1,.36,1)}
+  @keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+  .idle-box .ring{width:74px;height:74px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(125deg,#fef3c7,#fde68a);color:#b45309;font-size:1.9rem;font-weight:800;font-family:'JetBrains Mono',monospace}
+  .idle-box h3{font-size:1.12rem;font-weight:800;margin-bottom:8px;color:var(--ink)}
+  .idle-box p{font-size:.85rem;color:var(--muted);line-height:1.6;margin-bottom:22px}
+
+  /* ================= RESPONSIVE ================= */
+  @media(max-width:1080px){
+    .util-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .foot-inner{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:860px){
+    .util-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .hero{padding:26px 22px}
+    .hero h1{font-size:1.36rem}
+    .kv{grid-template-columns:1fr;gap:0}
+    .kv dt{padding-bottom:0;border-bottom:none}
+    .kv dd{padding-top:4px}
+    .foot-inner{grid-template-columns:1fr;gap:24px}
+    .detail-top,.detail-body{padding:20px}
+  }
+  @media(max-width:560px){
+    main{padding:18px 14px 30px}
+    .header-inner{padding:12px 14px;gap:12px}
+    .emblem{width:48px;height:48px}
+    .title-main{font-size:1.02rem}
+    .title-sub{font-size:.72rem}
+    .util-grid{grid-template-columns:1fr;gap:10px}
+    .util-card{min-height:66px;padding:13px 14px}
+    .clock-pill{min-width:116px;padding:6px 11px}
+    #clock{font-size:.98rem}
+    .hotline-bar .num{font-size:1.2rem;width:100%;text-align:center}
+    .chat-wrap{height:min(72vh,560px)}
+    .prose,.survey-card{padding:20px}
+    .rate{flex:1 1 44%;min-width:0}
+  }
+  @media print{
+    header.site-header,footer.site-footer,.actions,.btn-back,.hotline-bar,#idle,.crumbbar{display:none!important}
+    body{background:#fff}
+    .detail-card{box-shadow:none;border:1px solid #ccc}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="emblem" aria-hidden="true">
+      <svg viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="31" fill="#da251d"/>
+        <path d="M32 12.5l4.9 15.1H52.4L39.9 36.9l4.7 14.5L32 42.5l-12.6 8.9 4.7-14.5L11.6 27.6h15.5L32 12.5z" fill="#ffcd00"/>
+      </svg>
+    </div>
+    <div class="title-block">
+      <span class="title-kicker">Sách điện tử Thủ tục hành chính</span>
+      <div class="title-main"><span class="highlight">XÃ VÔ TRANH</span> — TỈNH THÁI NGUYÊN</div>
+      <div class="title-sub">Ủy ban nhân dân xã Vô Tranh · Tra cứu 416 thủ tục hành chính cấp xã</div>
+    </div>
+    <div class="header-tools">
+      <div class="clock-pill">
+        <div id="clock">--:--:--</div>
+        <div id="date-line">Đang tải…</div>
+      </div>
+      <div class="fs-group" role="group" aria-label="Cỡ chữ">
+        <button class="fs-btn" id="fs-down" title="Thu nhỏ chữ" aria-label="Thu nhỏ chữ">A−</button>
+        <button class="fs-btn" id="fs-up" title="Phóng to chữ" aria-label="Phóng to chữ">A+</button>
+      </div>
+      <a class="tool-pill tel" href="tel:0334929603" title="Gọi đường dây nóng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0334 929 603
+      </a>
+      <button class="tool-pill" id="btn-home" title="Về trang chủ">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
+        Trang chủ
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HOME ================= -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div class="hero-inner">
+        <h1>Tra cứu <span class="hl">416 thủ tục hành chính</span><br>cấp xã trên địa bàn Xã Vô Tranh</h1>
+        <p>Danh mục thủ tục hành chính được công khai theo Thông báo số 93/TB-UBND ngày 16/3/2026 của UBND xã Vô Tranh, tỉnh Thái Nguyên. Quý vị có thể tra cứu theo lĩnh vực, tìm kiếm theo tên thủ tục hoặc mã TTHC.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>416</b><span>Thủ tục hành chính</span></div>
+          <div class="hero-stat"><b>13</b><span>Lĩnh vực Bộ quản lý</span></div>
+          <div class="hero-stat"><b>H55</b><span>Mã tỉnh Thái Nguyên</span></div>
+        </div>
+      </div>
+      <div class="hero-qr">
+        <div class="qr" id="hero-qr"></div>
+        <b>Quét mã mở Cổng Dịch vụ công</b>
+        <span>Dùng camera điện thoại để quét</span>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <svg class="lens" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="search" type="search" autocomplete="off" placeholder="Nhập tên thủ tục, mã TTHC… (ví dụ: khai sinh, chứng thực, đất đai)" aria-label="Tìm kiếm thủ tục hành chính">
+      <button id="search-clear" aria-label="Xóa tìm kiếm">✕</button>
+    </div>
+
+    <div class="section-head">
+      <h2>Dịch vụ &amp; tiện ích</h2>
+      <div class="rule"></div>
+      <span class="count">10 tiện ích</span>
+    </div>
+    <div class="util-grid" id="util-grid"></div>
+
+    <div class="section-head">
+      <h2>Thủ tục hành chính theo lĩnh vực</h2>
+      <div class="rule"></div>
+      <span class="count" id="sector-count">13 lĩnh vực</span>
+    </div>
+    <div class="sector-grid" id="sector-grid"></div>
+
+    <div class="hotline-bar">
+      <div class="ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div class="txt">
+        <b>Đường dây nóng tiếp nhận phản ánh, kiến nghị</b>
+        <span>UBND xã Vô Tranh · Trong giờ hành chính, từ thứ Hai đến thứ Sáu</span>
+      </div>
+      <a class="num" href="tel:0334929603">0334 929 603</a>
+    </div>
+  </section>
+
+  <!-- ================= LIST ================= -->
+  <section class="view" id="view-list">
+    <div class="crumbbar">
+      <button class="btn-back" data-go="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Trang chủ
+      </button>
+      <span class="crumb">Danh mục thủ tục · <b id="list-title-crumb">…</b></span>
+    </div>
+    <div class="section-head">
+      <h2 id="list-heading">Danh mục thủ tục</h2>
+      <div class="rule"></div>
+      <span class="count" id="list-count">0 thủ tục</span>
+    </div>
+    <div class="proc-list" id="proc-list"></div>
+  </section>
+
+  <!-- ================= DETAIL ================= -->
+  <section class="view" id="view-detail">
+    <div class="crumbbar">
+      <button class="btn-back" id="detail-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Quay lại
+      </button>
+      <span class="crumb" id="detail-crumb">Chi tiết thủ tục</span>
+    </div>
+    <div class="detail-card">
+      <div class="detail-top">
+        <span class="code" id="d-code">—</span>
+        <h1 id="d-name">—</h1>
+      </div>
+      <div class="detail-body">
+        <div class="notice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <div>Thông tin dưới đây trích từ danh mục thủ tục hành chính công khai của UBND xã Vô Tranh. Để xem đầy đủ thành phần hồ sơ, thời hạn giải quyết và biểu mẫu, vui lòng tra cứu trên Cổng Dịch vụ công Quốc gia.</div>
+        </div>
+        <dl class="kv">
+          <dt>Mã thủ tục</dt><dd id="d-code2">—</dd>
+          <dt>Lĩnh vực quản lý</dt><dd id="d-sector">—</dd>
+          <dt>Cấp thực hiện</dt><dd id="d-level">—</dd>
+          <dt>Quyết định công bố</dt><dd id="d-qd">—</dd>
+          <dt>Cơ quan công khai</dt><dd>UBND tỉnh Thái Nguyên</dd>
+          <dt>Tình trạng</dt><dd>Đang áp dụng · Công khai</dd>
+        </dl>
+        <div class="qr-card">
+          <div class="qr" id="d-qr"></div>
+          <div class="tx">
+            <b>Quét mã QR để mở thủ tục trên điện thoại</b>
+            <span>Dùng camera điện thoại quét mã, trình duyệt sẽ mở trang thủ tục tương ứng trên Cổng Dịch vụ công Quốc gia (tỉnh Thái Nguyên – mã H55) để nộp hồ sơ trực tuyến.</span>
+            <span class="url" id="d-qr-url"></span>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" id="d-dvc" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14L21 3"/></svg>
+            Tra cứu trên Cổng DVC Quốc gia
+          </a>
+          <button class="btn btn-ghost" onclick="window.print()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+            In thủ tục
+          </button>
+          <a class="btn btn-ghost" href="tel:0334929603">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Hỗ trợ qua điện thoại
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GUIDE ================= -->
+  <section class="view" id="view-guide">
+    <div class="crumbbar">
+      <button class="btn-back" data-go="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Trang chủ
+      </button>
+      <span class="crumb">Sổ tay hướng dẫn Dịch vụ công trực tuyến</span>
+    </div>
+    <div class="prose">
+      <h3><span class="n">1</span> Dịch vụ công trực tuyến là gì?</h3>
+      <p>Dịch vụ công trực tuyến là hình thức tiếp nhận và giải quyết thủ tục hành chính qua môi trường điện tử. Người dân có thể nộp hồ sơ, thanh toán phí, nhận kết quả ngay tại nhà mà không cần đến trụ sở UBND, không phụ thuộc giờ hành chính.</p>
+
+      <h3><span class="n">2</span> Chuẩn bị tài khoản định danh điện tử VNeID</h3>
+      <ul>
+        <li>Cài đặt ứng dụng <b>VNeID</b> trên điện thoại (Google Play hoặc App Store).</li>
+        <li>Đăng ký tài khoản bằng số điện thoại chính chủ, xác thực bằng số định danh cá nhân.</li>
+        <li>Đến Công an xã Vô Tranh để kích hoạt tài khoản <b>định danh điện tử mức 2</b> — điều kiện cần để nộp hồ sơ trực tuyến.</li>
+        <li>Đăng nhập Cổng Dịch vụ công Quốc gia bằng tài khoản VNeID.</li>
+      </ul>
+
+      <h3><span class="n">3</span> Các bước nộp hồ sơ trực tuyến</h3>
+      <ul>
+        <li><b>Bước 1:</b> Truy cập <a href="https://dichvucong.gov.vn/" target="_blank" rel="noopener">dichvucong.gov.vn</a>, đăng nhập bằng VNeID.</li>
+        <li><b>Bước 2:</b> Tìm thủ tục cần thực hiện, chọn cơ quan giải quyết là <b>UBND xã Vô Tranh</b>.</li>
+        <li><b>Bước 3:</b> Điền tờ khai trực tuyến, tải lên bản chụp các giấy tờ theo yêu cầu.</li>
+        <li><b>Bước 4:</b> Thanh toán lệ phí (nếu có) và nhận mã hồ sơ để theo dõi tiến độ.</li>
+        <li><b>Bước 5:</b> Nhận kết quả trực tuyến hoặc tại Bộ phận Một cửa UBND xã Vô Tranh.</li>
+      </ul>
+
+      <h3><span class="n">4</span> Lưu ý khi chụp, tải hồ sơ</h3>
+      <ul>
+        <li>Chụp rõ nét, đủ 4 góc, không lóa sáng; định dạng PDF hoặc JPG, dung lượng dưới 5MB mỗi trang.</li>
+        <li>Thông tin khai phải trùng khớp với giấy tờ tùy thân và dữ liệu dân cư quốc gia.</li>
+        <li>Trường hợp hồ sơ bị từ chối, cơ quan tiếp nhận phải thông báo nêu rõ lý do trong thời hạn quy định.</li>
+      </ul>
+
+      <h3><span class="n">5</span> Đường dẫn tra cứu chính thức</h3>
+      <div class="chips">
+        <a class="chip" href="https://dichvucong.gov.vn/tra-cuu-thu-tuc/danh-sach?showAdvanced=true&amp;searchType=PROVINCE&amp;formalityType=STANDARD&amp;province=H55&amp;activeKey=STANDARD" target="_blank" rel="noopener">TTHC Tỉnh Thái Nguyên (H55)</a>
+        <a class="chip" href="https://votranh.thainguyen.gov.vn/van-ban-tai-lieu" target="_blank" rel="noopener">Văn bản – Tài liệu xã</a>
+        <a class="chip" href="https://votranh.thainguyen.gov.vn/hoi-dap" target="_blank" rel="noopener">Hỏi đáp – Phản ánh</a>
+        <a class="chip" href="https://votranh.thainguyen.gov.vn/cai-cach-thu-tuc-hanh-chinh" target="_blank" rel="noopener">Cải cách TTHC</a>
+      </div>
+
+      <h3><span class="n">6</span> Trường hợp cần hỗ trợ</h3>
+      <p>Liên hệ Bộ phận Một cửa – UBND xã Vô Tranh, tỉnh Thái Nguyên. Điện thoại: <a href="tel:0334929603"><b>0334 929 603</b></a> · Email: <a href="mailto:buiphuongthaopm@gmail.com">buiphuongthaopm@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- ================= DIRECTORY ================= -->
+  <section class="view" id="view-directory">
+    <div class="crumbbar">
+      <button class="btn-back" data-go="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Trang chủ
+      </button>
+      <span class="crumb">Cán bộ, Công chức</span>
+    </div>
+    <div class="section-head">
+      <h2>Cán bộ, Công chức xã Vô Tranh</h2>
+      <div class="rule"></div>
+      <span class="count" id="off-count">—</span>
+    </div>
+
+    <div class="off-tools">
+      <div class="off-tabs" id="off-tabs"></div>
+      <div class="off-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="off-q" type="search" autocomplete="off" placeholder="Tìm theo tên hoặc chức vụ…" aria-label="Tìm cán bộ">
+      </div>
+    </div>
+
+    <div class="off-grid" id="off-grid"></div>
+
+    <div class="notice" style="margin-top:20px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <div>Họ tên, chức vụ, năm sinh và số điện thoại được trích từ sơ đồ bộ máy công khai của UBND xã Vô Tranh. Trường hợp thông tin thay đổi, Quý vị vui lòng phản ánh tới đường dây nóng <b>0334 929 603</b> để cập nhật.</div>
+    </div>
+  </section>
+
+  <!-- ================= EFORM ================= -->
+  <section class="view" id="view-eform">
+    <div class="crumbbar">
+      <button class="btn-back" id="ef-back" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span id="ef-back-lbl">Trang chủ</span>
+      </button>
+      <span class="crumb">Eform mẫu đơn · <b id="ef-crumb">Danh mục biểu mẫu</b></span>
+    </div>
+
+    <div id="ef-list-wrap">
+      <div class="section-head">
+        <h2>Eform mẫu đơn, tờ khai</h2>
+        <div class="rule"></div>
+        <span class="count" id="ef-count">—</span>
+      </div>
+      <div class="notice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <div>Biểu mẫu in sẵn dùng tại Bộ phận Một cửa UBND xã Vô Tranh. Quý vị có thể xem trước, in ra để điền tay, hoặc nộp hồ sơ trực tuyến trên Cổng Dịch vụ công Quốc gia.</div>
+      </div>
+      <div class="off-tools">
+        <div class="off-tabs" id="ef-tabs"></div>
+        <div class="off-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="ef-q" type="search" autocomplete="off" placeholder="Tìm mẫu đơn…" aria-label="Tìm biểu mẫu">
+        </div>
+      </div>
+      <div class="ef-grid" id="ef-grid"></div>
+    </div>
+
+    <div id="ef-detail-wrap" style="display:none">
+      <div class="ef-toolbar">
+        <button class="btn btn-ghost" id="ef-print">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          In mẫu này (A4)
+        </button>
+        <button class="btn btn-ghost" id="ef-related">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          Thủ tục liên quan
+        </button>
+        <span class="sp"></span>
+      </div>
+      <div class="ef-sheet" id="ef-sheet"></div>
+      <div class="notice ef-note" style="max-width:920px;margin:16px auto 0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <div>Mẫu in do kiosk dựng lại theo cấu trúc biểu mẫu đang áp dụng, dùng để đối chiếu và điền trước. Bản chính thức do cán bộ tiếp nhận phát hành tại quầy, hoặc tải trên Cổng Dịch vụ công Quốc gia.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHATBOT ================= -->
+  <section class="view" id="view-chatbot">
+    <div class="crumbbar">
+      <button class="btn-back" data-go="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Trang chủ
+      </button>
+      <span class="crumb">Chatbot hỗ trợ tra cứu 24/7</span>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-head">
+        <div class="av">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="3"/><path d="M12 4v4M8 14h.01M16 14h.01M9 18h6"/></svg>
+        </div>
+        <div>
+          <b>Trợ lý tra cứu TTHC</b>
+          <span>Hoạt động 24/7 · Trả lời tự động từ danh mục 416 thủ tục</span>
+        </div>
+      </div>
+      <div class="chat-body" id="chat-body"></div>
+      <div class="chat-foot">
+        <input id="chat-input" type="text" placeholder="Nhập nội dung cần tra cứu, ví dụ: đăng ký khai sinh…" autocomplete="off">
+        <button id="chat-send" aria-label="Gửi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SURVEY ================= -->
+  <section class="view" id="view-survey">
+    <div class="crumbbar">
+      <button class="btn-back" data-go="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Trang chủ
+      </button>
+      <span class="crumb">Khảo sát mức độ hài lòng</span>
+    </div>
+    <div class="survey-card">
+      <div class="section-head" style="margin-bottom:20px">
+        <h2>Đánh giá chất lượng phục vụ</h2>
+        <div class="rule"></div>
+      </div>
+      <p style="font-size:.86rem;line-height:1.7;color:#475569;margin-bottom:24px">
+        Ý kiến của Quý vị giúp UBND xã Vô Tranh nâng cao chất lượng giải quyết thủ tục hành chính. Vui lòng chọn mức độ hài lòng cho từng nội dung dưới đây.
+      </p>
+
+      <div class="survey-q" data-q="1">
+        <div class="q">1. Thái độ phục vụ của cán bộ, công chức</div>
+        <div class="rate-row">
+          <button class="rate" type="button" data-v="Rất hài lòng"><span class="em">😍</span><span class="tx">Rất hài lòng</span></button>
+          <button class="rate" type="button" data-v="Hài lòng"><span class="em">🙂</span><span class="tx">Hài lòng</span></button>
+          <button class="rate" type="button" data-v="Bình thường"><span class="em">😐</span><span class="tx">Bình thường</span></button>
+          <button class="rate" type="button" data-v="Chưa hài lòng"><span class="em">🙁</span><span class="tx">Chưa hài lòng</span></button>
+        </div>
+      </div>
+
+      <div class="survey-q" data-q="2">
+        <div class="q">2. Thời gian giải quyết hồ sơ</div>
+        <div class="rate-row">
+          <button class="rate" type="button" data-v="Rất hài lòng"><span class="em">😍</span><span class="tx">Rất hài lòng</span></button>
+          <button class="rate" type="button" data-v="Hài lòng"><span class="em">🙂</span><span class="tx">Hài lòng</span></button>
+          <button class="rate" type="button" data-v="Bình thường"><span class="em">😐</span><span class="tx">Bình thường</span></button>
+          <button class="rate" type="button" data-v="Chưa hài lòng"><span class="em">🙁</span><span class="tx">Chưa hài lòng</span></button>
+        </div>
+      </div>
+
+      <div class="survey-q" data-q="3">
+        <div class="q">3. Cơ sở vật chất, trang thiết bị tại Bộ phận Một cửa</div>
+        <div class="rate-row">
+          <button class="rate" type="button" data-v="Rất hài lòng"><span class="em">😍</span><span class="tx">Rất hài lòng</span></button>
+          <button class="rate" type="button" data-v="Hài lòng"><span class="em">🙂</span><span class="tx">Hài lòng</span></button>
+          <button class="rate" type="button" data-v="Bình thường"><span class="em">😐</span><span class="tx">Bình thường</span></button>
+          <button class="rate" type="button" data-v="Chưa hài lòng"><span class="em">🙁</span><span class="tx">Chưa hài lòng</span></button>
+        </div>
+      </div>
+
+      <div class="survey-q">
+        <div class="q">4. Ý kiến góp ý khác (không bắt buộc)</div>
+        <textarea id="survey-note" placeholder="Quý vị có thể nêu cụ thể thủ tục, thời điểm và nội dung cần góp ý…"></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="survey-send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Gửi góp ý
+        </button>
+        <a class="btn btn-ghost" href="https://votranh.thainguyen.gov.vn/hoi-dap" target="_blank" rel="noopener">Gửi qua trang Hỏi đáp</a>
+      </div>
+      <p id="survey-msg" style="margin-top:16px;font-size:.82rem;font-weight:700;color:#047857;display:none"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="nm">TRANG THÔNG TIN ĐIỆN TỬ XÃ VÔ TRANH<br>TỈNH THÁI NGUYÊN</div>
+      <p>
+        Cơ quan chủ quản: <b>UBND XÃ VÔ TRANH</b><br>
+        Địa chỉ: Xã Vô Tranh, Tỉnh Thái Nguyên<br>
+        Trưởng ban Biên tập: Đ/c Bùi Phương Thảo – Phó Chủ tịch UBND xã<br>
+        Điện thoại: 0334 929 603 · E-mail: buiphuongthaopm@gmail.com
+      </p>
+    </div>
+    <div class="foot-col">
+      <h5>Liên kết nhanh</h5>
+      <a href="https://votranh.thainguyen.gov.vn/trang-chu" target="_blank" rel="noopener">Trang chủ</a>
+      <a href="https://votranh.thainguyen.gov.vn/gioi-thieu" target="_blank" rel="noopener">Giới thiệu</a>
+      <a href="https://votranh.thainguyen.gov.vn/so-o-bo-may" target="_blank" rel="noopener">Sơ đồ bộ máy</a>
+      <a href="https://votranh.thainguyen.gov.vn/danh-ba-dien-tu" target="_blank" rel="noopener">Danh bạ điện tử</a>
+      <a href="https://votranh.thainguyen.gov.vn/van-ban-tai-lieu" target="_blank" rel="noopener">Văn bản – Tài liệu</a>
+    </div>
+    <div class="foot-col">
+      <h5>Dịch vụ công</h5>
+      <a href="https://dichvucong.gov.vn/tra-cuu-thu-tuc/danh-sach?showAdvanced=true&amp;searchType=PROVINCE&amp;formalityType=STANDARD&amp;province=H55&amp;activeKey=STANDARD" target="_blank" rel="noopener">TTHC Tỉnh Thái Nguyên</a>
+      <a href="https://dichvucong.gov.vn/" target="_blank" rel="noopener">Cổng DVC Quốc gia</a>
+      <a href="https://votranh.thainguyen.gov.vn/cai-cach-thu-tuc-hanh-chinh" target="_blank" rel="noopener">Cải cách thủ tục hành chính</a>
+      <a href="https://votranh.thainguyen.gov.vn/hoi-dap" target="_blank" rel="noopener">Hỏi đáp – Phản ánh</a>
+      <a href="https://votranh.thainguyen.gov.vn/lich-cong-tac" target="_blank" rel="noopener">Lịch công tác</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>Ghi rõ nguồn “Trang thông tin điện tử xã Vô Tranh” khi phát hành lại thông tin từ website này.</span>
+    <span class="badge">● Đã kết nối EMC</span>
+  </div>
+</footer>
+
+<div id="idle" role="dialog" aria-modal="true" aria-labelledby="idle-title">
+  <div class="idle-box">
+    <div class="ring" id="idle-sec">10</div>
+    <h3 id="idle-title">Phiên làm việc sắp kết thúc</h3>
+    <p>Vui lòng chạm vào màn hình để tiếp tục tra cứu thủ tục hành chính.</p>
+    <button class="btn btn-primary" id="idle-continue" style="width:100%">Tiếp tục tra cứu</button>
+  </div>
+</div>
+
+<script src="qrcode.js"></script>
+<script src="officials.js"></script>
+<script src="eforms.js"></script>
+<script src="data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var DATA = window.KIOSK_DATA;
+  if (!DATA) { document.body.insertAdjacentHTML('afterbegin', '<p style="padding:20px;font-family:sans-serif">Không tải được dữ liệu (data.js).</p>'); return; }
+  var PROCS = DATA.procedures, SECTORS = DATA.sectors, CFG = DATA.config;
+  var DVC = 'https://dichvucong.gov.vn/p/home/dvc-tthc-chi-tiet-thu-tuc.html?ma_thu_tuc=';
+
+  var ICON = {
+    userCheck:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M17 11l2 2 4-4"/>',
+    users:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+    chat:'<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>',
+    star:'<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>',
+    fileBadge:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/>',
+    fileText:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>',
+    building:'<path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/>',
+    map:'<path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+    book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+    briefcase:'<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    leaf:'<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/>',
+    scale:'<path d="M12 3v18M3 7h18M6 7l-3 7h6L6 7zM18 7l-3 7h6l-3-7z"/>',
+    wallet:'<path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/>',
+    heart:'<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+    bolt:'<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>',
+    sparkle:'<path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3z"/>',
+    hands:'<path d="M11 12V5a2 2 0 1 1 4 0v6"/><path d="M7 12V7a2 2 0 1 1 4 0v5"/><path d="M3 12V9a2 2 0 1 1 4 0v8a5 5 0 0 0 5 5h2a6 6 0 0 0 6-6v-3a2 2 0 1 1 4 0"/>',
+    shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    flag:'<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>',
+    target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>'
+  };
+  function svg(n){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + (ICON[n] || ICON.fileText) + '</svg>'; }
+
+  var UTILS = [
+    {label:'Cán bộ, Công chức', sub:'38 cán bộ · 4 khối', icon:'userCheck', active:true, go:'directory'},
+    {label:'Cán bộ 19 Tổ dân phố', sub:'Danh bạ điện tử', icon:'users', go:'to-dan-pho'},
+    {label:'Chatbot Hỗ trợ 24/7', sub:'Trợ lý tra cứu tự động', icon:'chat', go:'chatbot'},
+    {label:'Khảo sát hài lòng', sub:'Đánh giá chất lượng phục vụ', icon:'star', go:'survey'},
+    {label:'Quyết định công bố TTHC', sub:'Thông báo 93/TB-UBND', icon:'fileBadge', href:'https://votranh.thainguyen.gov.vn/cai-cach-thu-tuc-hanh-chinh/thong-bao-cong-khai-danh-muc-thu-tuc-hanh-chinh-xa-vo-tranh-257596'},
+    {label:'Eform mẫu đơn', sub:'16 biểu mẫu in sẵn', icon:'fileText', go:'eform'},
+    {label:'TTHC Cấp Tỉnh, Sở, ngành', sub:'Tra cứu theo mã H55', icon:'building', href:'https://dichvucong.gov.vn/tra-cuu-thu-tuc/danh-sach?showAdvanced=true&searchType=PROVINCE&formalityType=STANDARD&province=H55&activeKey=STANDARD'},
+    {label:'TTHC Đặc thù lĩnh vực Đất đai', sub:'', icon:'map', tag:'dat-dai'},
+    {label:'Sổ tay hướng dẫn DVC Trực tuyến', sub:'Hướng dẫn nộp hồ sơ online', icon:'book', go:'guide'},
+    {label:'Hỗ trợ Doanh nghiệp - Hộ kinh doanh', sub:'', icon:'briefcase', tag:'doanh-nghiep'}
+  ];
+
+  function stripAcc(s){
+    s = String(s || '').replace(/đ/g,'d').replace(/Đ/g,'D');
+    return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  }
+  var _hay = {};
+  function hay(p){
+    if (!_hay[p.code]) _hay[p.code] = stripAcc(p.name + ' ' + p.code + ' ' + p.sector).toLowerCase();
+    return _hay[p.code];
+  }
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  /* Chấm điểm khớp: ưu tiên khớp nguyên cụm trong tên, rồi khớp đầu tên,
+     rồi khớp từng từ trong tên, cuối cùng mới tới mã/lĩnh vực. */
+  var _flat = {};
+  function flatName(p){
+    if (!_flat[p.code]) _flat[p.code] = stripAcc(p.name).toLowerCase();
+    return _flat[p.code];
+  }
+  function scoreOf(p, phrase, words){
+    var flat = flatName(p), s = 0, hit = 0;
+    if (phrase){
+      var at = flat.indexOf(phrase);
+      if (at === 0) s += 26;
+      else if (at > -1) s += 16;
+    }
+    for (var i = 0; i < words.length; i++){
+      var w = words[i];
+      if (flat.indexOf(w) > -1){ s += 5; hit++; }
+      else if (hay(p).indexOf(w) > -1){ s += 1; hit++; }
+    }
+    if (hit === words.length) s += 8;
+    if (p.stt <= 40) s += 0.5;
+    return s;
+  }
+  function matchAll(q){
+    var phrase = stripAcc(q).toLowerCase().trim().replace(/\s+/g, ' ');
+    var words = phrase.split(' ').filter(Boolean);
+    if (!words.length) return [];
+    var out = [];
+    for (var i = 0; i < PROCS.length; i++){
+      var p = PROCS[i], h = hay(p), ok = true;
+      for (var j = 0; j < words.length; j++){
+        if (h.indexOf(words[j]) < 0){ ok = false; break; }
+      }
+      if (ok) out.push({p:p, s:scoreOf(p, phrase, words)});
+    }
+    out.sort(function(a, b){ return b.s - a.s || a.p.stt - b.p.stt; });
+    return out.map(function(x){ return x.p; });
+  }
+
+  /* show/hide with history so the hardware back button works */
+  var current = 'home';
+  function show(view, push){
+    var prev = current;
+    document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+    var el = document.getElementById('view-' + view);
+    if (el) el.classList.add('active');
+    if (view === 'directory') renderDirectory();
+    if (view === 'eform' && prev !== 'eform') efReset();
+    current = view;
+    if (push !== false) history.pushState({v:view}, '', '#' + view);
+    window.scrollTo(0, 0);
+    if (view === 'chatbot') setTimeout(function(){ var i = document.getElementById('chat-input'); if (i) i.focus(); }, 120);
+  }
+
+  window.addEventListener('popstate', function(e){
+    if (routeHash(location.hash)) return;
+    var v = (e.state && e.state.v) || 'home';
+    document.querySelectorAll('.view').forEach(function(x){ x.classList.remove('active'); });
+    var el = document.getElementById('view-' + v);
+    if (el) el.classList.add('active');
+    current = v;
+  });
+
+  /* ---------------- home ---------------- */
+  function renderUtils(){
+    var nLand = PROCS.filter(function(p){ return p.tags.indexOf('dat-dai') > -1; }).length;
+    var nBiz  = PROCS.filter(function(p){ return p.tags.indexOf('doanh-nghiep') > -1; }).length;
+    UTILS.forEach(function(u){
+      if (u.tag === 'dat-dai') u.sub = nLand + ' thủ tục về đất đai';
+      if (u.tag === 'doanh-nghiep') u.sub = nBiz + ' thủ tục về doanh nghiệp';
+    });
+    document.getElementById('util-grid').innerHTML = UTILS.map(function(u, i){
+      var inner = '<span class="ico">' + svg(u.icon) + '</span>' +
+                  '<span class="lbl">' + esc(u.label) + '<span class="sub">' + esc(u.sub) + '</span></span>';
+      var attrs = 'class="util-card' + (u.active ? ' is-active' : '') + '" data-idx="' + i + '"';
+      if (u.href){
+        return '<a ' + attrs + ' href="' + esc(u.href) + '" target="_blank" rel="noopener">' + inner + '<span class="ext">↗</span></a>';
+      }
+      return '<button ' + attrs + ' type="button">' + inner + '</button>';
+    }).join('');
+  }
+  document.getElementById('util-grid').addEventListener('click', function(e){
+    var card = e.target.closest('.util-card');
+    if (!card || card.tagName === 'A') return;
+    var u = UTILS[+card.dataset.idx];
+    if (u.go === 'to-dan-pho'){ offTab = 'to'; show('directory'); return; }
+    if (u.go) show(u.go);
+    else if (u.tag) renderList({tag:u.tag, title:u.label});
+  });
+
+  function renderSectors(){
+    document.getElementById('sector-grid').innerHTML = SECTORS.map(function(s){
+      return '<button class="sector-card" type="button" data-sec="' + esc(s.name) + '">' +
+        '<span class="ico" style="background:' + esc(s.color) + '14;color:' + esc(s.color) + '">' + svg(s.icon) + '</span>' +
+        '<span class="txt"><span class="nm">' + esc(s.name) + '</span><span class="ct">' + s.count + ' thủ tục</span></span>' +
+        '<span class="arw">›</span></button>';
+    }).join('');
+  }
+  document.getElementById('sector-grid').addEventListener('click', function(e){
+    var c = e.target.closest('.sector-card');
+    if (c) renderList({sector:c.dataset.sec, title:c.dataset.sec});
+  });
+
+  /* ---------------- QR ---------------- */
+  var DVC_PORTAL = 'https://dichvucong.gov.vn/tra-cuu-thu-tuc/danh-sach?showAdvanced=true&searchType=PROVINCE&formalityType=STANDARD&province=H55&activeKey=STANDARD';
+  function qrImg(text){
+    try {
+      if (typeof qrcode !== 'function') return '';
+      var q = qrcode(0, 'M');
+      q.addData(text); q.make();
+      return q.createImgTag(6, 2);
+    } catch (err){
+      return '<div style="font-size:.62rem;color:#b91c1c;padding:8px;text-align:center">Không tạo được mã QR</div>';
+    }
+  }
+
+  /* ---------------- officials ---------------- */
+  var OFFG = (window.OFFICIALS && window.OFFICIALS.groups) || [];
+  var offTab = 'ubnd', offQ = '';
+
+  function initials(n){
+    var w = n.trim().split(/\s+/);
+    var a = w[w.length - 1].charAt(0);
+    var b = w.length > 1 ? w[w.length - 2].charAt(0) : '';
+    return (b + a).toUpperCase();
+  }
+  function offCard(p){
+    var ph = p.img
+      ? '<span class="off-photo"><img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="lazy" onerror="this.parentNode.textContent=\'' + initials(p.name) + '\'"></span>'
+      : '<span class="off-photo">' + initials(p.name) + '</span>';
+    var tel = p.tel ? '<a class="tel" href="tel:' + esc(p.tel) + '">' + esc(p.tel.replace(/(\d{4})(\d{3})(\d{3})/, '$1 $2 $3')) + '</a>' : '';
+    var mail = p.email ? '<a href="mailto:' + esc(p.email) + '">Email</a>' : '';
+    return '<div class="off-card">' + ph +
+      '<div class="off-info">' +
+        '<div class="off-name">' + esc(p.name) + '</div>' +
+        '<div class="off-role">' + esc(p.chuc) + '</div>' +
+        '<div class="off-meta"><span class="unit-chip">' + esc(p.unit) + '</span>' +
+          (p.ns ? '<span class="yr">Sinh ' + esc(p.ns) + '</span>' : '') + '</div>' +
+        '<div class="off-links">' + tel + mail + '</div>' +
+      '</div></div>';
+  }
+  function renderDirectory(){
+    var tabs = document.getElementById('off-tabs');
+    var total = OFFG.reduce(function(a, g){ return a + g.people.length; }, 0);
+    tabs.innerHTML = OFFG.map(function(g){
+      return '<button type="button" class="off-tab' + (g.key === offTab ? ' on' : '') + '" data-off="' + g.key + '">' +
+        esc(g.name) + '<span class="n">' + g.people.length + '</span></button>';
+    }).join('') + '<button type="button" class="off-tab' + (offTab === 'to' ? ' on' : '') + '" data-off="to">Tổ dân phố</button>';
+
+    var grid = document.getElementById('off-grid');
+    var cnt  = document.getElementById('off-count');
+    if (offTab === 'to'){
+      cnt.textContent = '19 tổ dân phố';
+      grid.style.display = 'block';
+      grid.innerHTML = '<div class="notice" style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div>Danh sách <b>19 tổ dân phố</b> và tổ trưởng, tổ phó đang được UBND xã Vô Tranh cập nhật lên kiosk. Trong thời gian chờ cập nhật, Quý vị liên hệ Văn phòng UBND xã theo số <b>0334 929 603</b> để được cung cấp thông tin tổ dân phố nơi mình cư trú.</div></div>';
+      return;
+    }
+    var g = null;
+    for (var i = 0; i < OFFG.length; i++){ if (OFFG[i].key === offTab){ g = OFFG[i]; break; } }
+    if (!g) return;
+    var q = offQ.trim().toLowerCase();
+    var list = g.people.filter(function(p){
+      if (!q) return true;
+      return (p.name + ' ' + p.chuc + ' ' + p.unit).toLowerCase().indexOf(q) > -1;
+    });
+    grid.style.display = 'grid';
+    grid.innerHTML = list.length
+      ? list.map(offCard).join('')
+      : '<div class="notice" style="grid-column:1/-1"><div>Không tìm thấy cán bộ phù hợp với từ khóa “' + esc(offQ) + '”.</div></div>';
+    cnt.textContent = list.length + ' / ' + g.people.length + ' người · ' + g.full;
+  }
+  document.getElementById('off-tabs').addEventListener('click', function(e){
+    var b = e.target.closest('.off-tab');
+    if (!b) return;
+    offTab = b.dataset.off;
+    renderDirectory();
+  });
+  document.getElementById('off-q').addEventListener('input', function(e){
+    offQ = e.target.value;
+    renderDirectory();
+  });
+
+  /* ---------------- eform ---------------- */
+  var EF = window.EFORMS || {groups:[], forms:[]};
+  var efGroup = 'all', efQ = '', efCur = null;
+
+  function efReset(){
+    efCur = null;
+    document.getElementById('ef-list-wrap').style.display = '';
+    document.getElementById('ef-detail-wrap').style.display = 'none';
+    document.getElementById('ef-back-lbl').textContent = 'Trang chủ';
+    document.getElementById('ef-crumb').textContent = 'Danh mục biểu mẫu';
+    renderEformList();
+  }
+  function efGroupMeta(key){
+    for (var i = 0; i < EF.groups.length; i++){ if (EF.groups[i].key === key) return EF.groups[i]; }
+    return {name:'Khác', icon:'fileText', color:'#64748b'};
+  }
+  function renderEformList(){
+    var tabs = document.getElementById('ef-tabs');
+    tabs.innerHTML = '<button type="button" class="off-tab' + (efGroup === 'all' ? ' on' : '') + '" data-ef="all">Tất cả<span class="n">' + EF.forms.length + '</span></button>' +
+      EF.groups.map(function(g){
+        var n = EF.forms.filter(function(f){ return f.g === g.key; }).length;
+        return '<button type="button" class="off-tab' + (efGroup === g.key ? ' on' : '') + '" data-ef="' + g.key + '">' + esc(g.name) + '<span class="n">' + n + '</span></button>';
+      }).join('');
+
+    var q = efQ.trim().toLowerCase();
+    var list = EF.forms.filter(function(f){
+      if (efGroup !== 'all' && f.g !== efGroup) return false;
+      if (!q) return true;
+      return (f.title + ' ' + f.doc + ' ' + efGroupMeta(f.g).name).toLowerCase().indexOf(q) > -1;
+    });
+    document.getElementById('ef-count').textContent = list.length + ' biểu mẫu';
+    document.getElementById('ef-grid').innerHTML = list.length ? list.map(function(f){
+      var m = efGroupMeta(f.g);
+      return '<div class="ef-card">' +
+        '<div class="top"><span class="ico" style="background:' + esc(m.color) + '18;color:' + esc(m.color) + '">' + svg(m.icon) + '</span>' +
+          '<div><h4>' + esc(f.title) + '</h4><div class="doc">' + esc(f.doc) + '</div></div></div>' +
+        '<div class="go">' +
+          '<button type="button" class="main" data-efopen="' + esc(f.id) + '">Xem &amp; in mẫu</button>' +
+          '<button type="button" data-efrel="' + esc(f.id) + '">Thủ tục liên quan</button>' +
+        '</div></div>';
+    }).join('') : '<div class="notice" style="grid-column:1/-1"><div>Không tìm thấy biểu mẫu phù hợp.</div></div>';
+  }
+  document.getElementById('ef-tabs').addEventListener('click', function(e){
+    var b = e.target.closest('.off-tab');
+    if (!b) return;
+    efGroup = b.dataset.ef;
+    renderEformList();
+  });
+  document.getElementById('ef-q').addEventListener('input', function(e){
+    efQ = e.target.value;
+    renderEformList();
+  });
+  document.getElementById('ef-grid').addEventListener('click', function(e){
+    var o = e.target.closest('[data-efopen]');
+    if (o){ openEform(o.dataset.efopen); return; }
+    var r = e.target.closest('[data-efrel]');
+    if (r) efRelated(r.dataset.efrel);
+  });
+  function efFind(id){
+    for (var i = 0; i < EF.forms.length; i++){ if (EF.forms[i].id === id) return EF.forms[i]; }
+    return null;
+  }
+  function openEform(id){
+    var f = efFind(id);
+    if (!f) return;
+    efCur = f;
+    var rows = f.rows.map(function(row){
+      var cells = row.map(function(c){
+        var span = c[1] || 12, kind = c[2] || '';
+        var inner;
+        if (kind === 'area') inner = '<div class="ef-val" style="min-height:62px"></div>';
+        else if (kind.indexOf('sel|') === 0){
+          inner = '<div class="ef-val" style="font-size:.72rem;color:#475569">' +
+            kind.slice(4).split('|').map(function(o){ return '☐ ' + esc(o); }).join('&nbsp;&nbsp;&nbsp;') + '</div>';
+        } else inner = '<div class="ef-val"></div>';
+        return '<div class="ef-cell" style="grid-column:span ' + span + '"><span class="ef-lbl">' + esc(c[0]) + '</span>' + inner + '</div>';
+      }).join('');
+      return '<div class="ef-row">' + cells + '</div>';
+    }).join('');
+
+    document.getElementById('ef-sheet').innerHTML =
+      '<div class="qhead"><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b>Độc lập – Tự do – Hạnh phúc<br>———————</div>' +
+      '<h3>' + esc(f.title) + '</h3>' +
+      '<div class="doc">' + esc(f.doc) + '</div>' +
+      '<div class="ef-rows">' + rows + '</div>' +
+      '<div class="ef-sign"><div><b>NGƯỜI KHAI</b><i>(Ký, ghi rõ họ tên)</i></div>' +
+      '<div><b>XÁC NHẬN CỦA UBND XÃ VÔ TRANH</b><i>(Ký, đóng dấu)</i></div></div>';
+
+    document.getElementById('ef-list-wrap').style.display = 'none';
+    document.getElementById('ef-detail-wrap').style.display = '';
+    document.getElementById('ef-back-lbl').textContent = 'Danh mục mẫu đơn';
+    document.getElementById('ef-crumb').textContent = f.title;
+    window.scrollTo(0, 0);
+  }
+  document.getElementById('ef-back').addEventListener('click', function(){
+    if (efCur){ efReset(); window.scrollTo(0, 0); }
+    else show('home');
+  });
+  document.getElementById('ef-print').addEventListener('click', function(){ window.print(); });
+  function efRelated(id){
+    var f = efFind(id); if (!f) return;
+    var kw = stripAcc(f.kw).toLowerCase();
+    var hits = PROCS.filter(function(p){ return stripAcc(p.name).toLowerCase().indexOf(kw) > -1; });
+    if (!hits.length) hits = matchAll(f.kw);
+    renderList({items:hits, title:'Thủ tục liên quan: ' + f.title});
+  }
+  document.getElementById('ef-related').addEventListener('click', function(){ if (efCur) efRelated(efCur.id); });
+
+  /* QR: hero + detail */
+  (function(){
+    var hero = document.getElementById('hero-qr');
+    if (hero) hero.innerHTML = qrImg(DVC_PORTAL);
+  })();
+
+  /* ---------------- list ---------------- */
+  var lastList = null;
+  function rowHTML(p){
+    return '<button class="proc-row" type="button" data-code="' + esc(p.code) + '">' +
+      '<span class="num">' + p.stt + '</span>' +
+      '<span class="body"><span class="nm">' + esc(p.name) + '</span>' +
+        '<span class="meta"><span class="tag code">' + esc(p.code) + '</span>' +
+        '<span class="tag lvl">' + esc(p.level) + '</span>' +
+        (p.qd ? '<span class="tag">QĐ ' + esc(p.qd) + '</span>' : '') +
+        (p.sector ? '<span class="tag sec">' + esc(p.sector) + '</span>' : '') +
+      '</span></span><span class="go">›</span></button>';
+  }
+
+  function renderList(opts){
+    lastList = opts;
+    var items;
+    if (opts.tag) items = PROCS.filter(function(p){ return p.tags.indexOf(opts.tag) > -1; });
+    else if (opts.sector) items = PROCS.filter(function(p){ return p.sector === opts.sector; });
+    else if (opts.items) items = opts.items;
+    else items = PROCS;
+
+    document.getElementById('list-heading').textContent = opts.title || 'Danh mục thủ tục';
+    document.getElementById('list-title-crumb').textContent = opts.title || 'Danh mục thủ tục';
+    document.getElementById('list-count').textContent = items.length + ' thủ tục';
+
+    var box = document.getElementById('proc-list');
+    if (!items.length){
+      box.innerHTML = '<div class="empty"><div class="em">🔍</div><b>Không tìm thấy thủ tục phù hợp</b>' +
+        '<span>Quý vị vui lòng thử từ khóa khác hoặc liên hệ đường dây nóng <b>0334 929 603</b> để được hướng dẫn.</span></div>';
+    } else {
+      box.innerHTML = items.map(rowHTML).join('');
+    }
+    show('list');
+  }
+
+  document.getElementById('proc-list').addEventListener('click', function(e){
+    var row = e.target.closest('.proc-row');
+    if (row) openDetail(row.dataset.code);
+  });
+
+  /* ---------------- detail ---------------- */
+  function openDetail(code){
+    var p = null;
+    for (var i = 0; i < PROCS.length; i++){ if (PROCS[i].code === code){ p = PROCS[i]; break; } }
+    if (!p) return;
+    document.getElementById('d-code').textContent = p.code;
+    document.getElementById('d-code2').textContent = p.code;
+    document.getElementById('d-name').textContent = p.name;
+    document.getElementById('d-sector').textContent = p.sector || '—';
+    document.getElementById('d-level').textContent = p.level || 'Cấp Xã';
+    document.getElementById('d-qd').textContent = p.qd || '—';
+    var shortCode = String(p.code).split('.').slice(0,2).join('.');
+    var dvcUrl = DVC + encodeURIComponent(shortCode);
+    document.getElementById('d-dvc').href = dvcUrl;
+    document.getElementById('d-qr').innerHTML = qrImg(dvcUrl);
+    document.getElementById('d-qr-url').textContent = dvcUrl;
+    document.getElementById('detail-crumb').innerHTML = 'Chi tiết thủ tục · <b>' + esc(p.code) + '</b>';
+    document.title = p.name + ' — Xã Vô Tranh, Tỉnh Thái Nguyên';
+    show('detail');
+  }
+  document.getElementById('detail-back').addEventListener('click', function(){
+    if (lastList) renderList(lastList); else show('home');
+  });
+
+  /* ---------------- search ---------------- */
+  var searchEl = document.getElementById('search');
+  var clearEl  = document.getElementById('search-clear');
+  var tmr = null;
+  searchEl.addEventListener('input', function(){
+    var q = searchEl.value.trim();
+    clearEl.classList.toggle('on', !!q);
+    clearTimeout(tmr);
+    if (!q){ show('home'); return; }
+    tmr = setTimeout(function(){
+      var hits = matchAll(q);
+      renderList({items:hits, title:'Kết quả tìm kiếm: “' + q + '”'});
+    }, 200);
+  });
+  clearEl.addEventListener('click', function(){
+    searchEl.value = ''; clearEl.classList.remove('on'); show('home'); searchEl.focus();
+  });
+  searchEl.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ searchEl.value = ''; clearEl.classList.remove('on'); show('home'); }
+  });
+
+  /* ---------------- clock ---------------- */
+  var DAYS = ['Chủ nhật','Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy'];
+  function tick(){
+    var d = new Date();
+    var p2 = function(n){ return n < 10 ? '0' + n : '' + n; };
+    document.getElementById('clock').textContent = p2(d.getHours()) + ':' + p2(d.getMinutes()) + ':' + p2(d.getSeconds());
+    document.getElementById('date-line').textContent = DAYS[d.getDay()] + ', ' + p2(d.getDate()) + '/' + p2(d.getMonth() + 1) + '/' + d.getFullYear();
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------------- font scale ---------------- */
+  var fs = parseFloat(localStorage.getItem('kiosk-fs') || '1');
+  function applyFs(){
+    fs = Math.min(1.45, Math.max(0.85, fs));
+    document.documentElement.style.setProperty('--fs', fs.toFixed(2));
+    try { localStorage.setItem('kiosk-fs', fs.toFixed(2)); } catch (err){}
+  }
+  document.getElementById('fs-up').addEventListener('click', function(){ fs += 0.1; applyFs(); });
+  document.getElementById('fs-down').addEventListener('click', function(){ fs -= 0.1; applyFs(); });
+  applyFs();
+
+  /* ---------------- nav ---------------- */
+  document.getElementById('btn-home').addEventListener('click', function(){
+    searchEl.value = ''; clearEl.classList.remove('on'); show('home');
+    document.title = 'Sách điện tử Thủ tục hành chính — Xã Vô Tranh, Tỉnh Thái Nguyên';
+  });
+  document.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click', function(){ show(b.dataset.go); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && !document.getElementById('idle').classList.contains('on')){
+      var a = document.querySelector('.view.active');
+      if (a && a.id !== 'view-home') show('home');
+    }
+  });
+
+  /* ---------------- chatbot ---------------- */
+  var chatBody  = document.getElementById('chat-body');
+  var chatInput = document.getElementById('chat-input');
+
+  function bubble(html, who){
+    var d = document.createElement('div');
+    d.className = 'msg ' + who;
+    d.innerHTML = html;
+    chatBody.appendChild(d);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function botReply(text){
+    var found = matchAll(text);
+    if (!found.length){
+      var raw = stripAcc(text).trim();
+      if (!raw){
+        bubble('Quý vị vui lòng nhập từ khóa dài hơn, ví dụ: <b>khai sinh</b> hoặc mã <b>2.000635</b>.', 'bot');
+        return;
+      }
+      bubble('Tôi chưa tìm thấy thủ tục nào khớp với “<b>' + esc(text) + '</b>”.<br><br>Quý vị có thể thử:<br>• Nhập tên ngắn gọn hơn (ví dụ: <b>khai sinh</b>)<br>• Nhập mã TTHC (ví dụ: <b>2.000635</b>)<br>• Gọi <b>0334 929 603</b> để được hướng dẫn trực tiếp', 'bot');
+      return;
+    }
+    var top = found.slice(0, 6);
+    var html = 'Tôi tìm thấy <b>' + found.length + '</b> thủ tục phù hợp' +
+      (found.length > top.length ? ', dưới đây là ' + top.length + ' kết quả sát nhất' : '') + ':<div class="hits">' +
+      top.map(function(p){
+        return '<button class="hit" data-code="' + esc(p.code) + '">' + esc(p.name) +
+          '<br><span style="font-weight:600;opacity:.65;font-size:.7rem">' + esc(p.code) + ' · ' + esc(p.sector) + '</span></button>';
+      }).join('') + '</div>';
+    bubble(html, 'bot');
+  }
+
+  function sendChat(){
+    var v = chatInput.value.trim();
+    if (!v) return;
+    bubble(esc(v), 'user');
+    chatInput.value = '';
+    setTimeout(function(){ botReply(v); }, 300);
+  }
+  document.getElementById('chat-send').addEventListener('click', sendChat);
+  chatInput.addEventListener('keydown', function(e){ if (e.key === 'Enter') sendChat(); });
+  chatBody.addEventListener('click', function(e){
+    var h = e.target.closest('.hit');
+    if (h) openDetail(h.dataset.code);
+  });
+
+  /* ---------------- survey ---------------- */
+  document.querySelectorAll('.survey-q[data-q]').forEach(function(q){
+    q.addEventListener('click', function(e){
+      var b = e.target.closest('.rate');
+      if (!b) return;
+      q.querySelectorAll('.rate').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+    });
+  });
+  document.getElementById('survey-send').addEventListener('click', function(){
+    var answers = {};
+    document.querySelectorAll('.survey-q[data-q]').forEach(function(q){
+      var sel = q.querySelector('.rate.on');
+      answers[q.dataset.q] = sel ? sel.dataset.v : '(chưa chọn)';
+    });
+    var note = document.getElementById('survey-note').value.trim();
+    var body =
+      'KHAO SAT MUC DO HAI LONG - UBND XA VO TRANH%0D%0A%0D%0A' +
+      '1. Thai do phuc vu cua can bo, cong chuc: ' + encodeURIComponent(answers['1']) + '%0D%0A' +
+      '2. Thoi gian giai quyet ho so: ' + encodeURIComponent(answers['2']) + '%0D%0A' +
+      '3. Co so vat chat, trang thiet bi: ' + encodeURIComponent(answers['3']) + '%0D%0A%0D%0A' +
+      'Y kien gop y khac: ' + encodeURIComponent(note || '(khong co)') + '%0D%0A%0D%0A' +
+      'Gui tu: Sach dien tu TTHC xa Vo Tranh - ' + encodeURIComponent(new Date().toLocaleString('vi-VN'));
+    var a = document.createElement('a');
+    a.href = 'mailto:buiphuongthaopm@gmail.com?subject=' + encodeURIComponent('Khao sat muc do hai long - UBND xa Vo Tranh') + '&body=' + body;
+    a.style.display = 'none';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    var msg = document.getElementById('survey-msg');
+    msg.style.display = 'block';
+    msg.textContent = '✓ Đã tạo thư góp ý. Vui lòng nhấn Gửi trong ứng dụng thư điện tử để hoàn tất.';
+  });
+
+  /* ---------------- idle ---------------- */
+  var IDLE_MS = CFG.idle_ms || 300000;
+  var WARN_MS = CFG.warn_ms || 10000;
+  var idleTimer = null, warnTimer = null, warnLeft = 0;
+  var idleEl = document.getElementById('idle');
+  var idleSec = document.getElementById('idle-sec');
+
+  function resetIdle(){
+    clearTimeout(idleTimer); clearInterval(warnTimer);
+    idleEl.classList.remove('on');
+    idleTimer = setTimeout(startWarn, IDLE_MS);
+  }
+  function startWarn(){
+    warnLeft = Math.round(WARN_MS / 1000);
+    idleSec.textContent = warnLeft;
+    idleEl.classList.add('on');
+    warnTimer = setInterval(function(){
+      warnLeft -= 1;
+      idleSec.textContent = warnLeft > 0 ? warnLeft : 0;
+      if (warnLeft <= 0){
+        clearInterval(warnTimer);
+        idleEl.classList.remove('on');
+        searchEl.value = ''; clearEl.classList.remove('on');
+        show('home', false);
+        resetIdle();
+      }
+    }, 1000);
+  }
+  document.getElementById('idle-continue').addEventListener('click', function(e){ e.stopPropagation(); resetIdle(); });
+  ['click','touchstart','keydown'].forEach(function(ev){
+    document.addEventListener(ev, resetIdle, {passive:true});
+  });
+  resetIdle();
+
+  /* ---------------- init ---------------- */
+  renderUtils();
+  renderSectors();
+  document.getElementById('sector-count').textContent = SECTORS.length + ' lĩnh vực';
+  bubble('Xin chào! Tôi là trợ lý tra cứu thủ tục hành chính của xã Vô Tranh. Quý vị có thể nhập tên thủ tục, lĩnh vực hoặc mã TTHC để tôi tìm giúp.<br><br><b>Gợi ý:</b> đăng ký khai sinh · chứng thực · đất đai · hộ kinh doanh · hòa giải', 'bot');
+  var TAGS = { 'dat-dai': 'TTHC Đặc thù lĩnh vực Đất đai', 'doanh-nghiep': 'Hỗ trợ Doanh nghiệp - Hộ kinh doanh' };
+  function routeHash(h){
+    h = (h || '').replace('#', '');
+    if (!h) return false;
+    if (h === 'tthc' || h === 'list') { renderList({ title: 'Tất cả thủ tục hành chính' }); return true; }
+    if (TAGS && TAGS[h]) { renderList({ tag: h, title: TAGS[h] }); return true; }
+    if (document.getElementById('view-' + h)) { show(h, false); return true; }
+    return false;
+  }
+  if (!routeHash(location.hash)) history.replaceState({v:'home'}, '', '#home');
+})();
+</script>
+</body>
+</html>

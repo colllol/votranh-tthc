@@ -1,0 +1,402 @@
+/* Danh sách cán bộ, công chức xã Vô Tranh — trích từ sơ đồ bộ máy
+   https://votranh.thainguyen.gov.vn/so-o-bo-may (công khai, cập nhật 26/11/2026) */
+window.OFFICIALS = {
+ "groups": [
+  {
+   "key": "danguy",
+   "name": "Đảng ủy xã",
+   "full": "BCH Đảng bộ xã Vô Tranh",
+   "icon": "shield",
+   "units": [
+    "THƯỜNG TRỰC ĐẢNG ỦY XÃ VÔ TRANH",
+    "ỦY BAN KIỂM TRA ĐẢNG ỦY",
+    "VĂN PHÒNG ĐẢNG ỦY",
+    "BAN XÂY DỰNG ĐẢNG XÃ VÔ TRANH"
+   ],
+   "people": [
+    {
+     "name": "Đặng Thế Vinh",
+     "chuc": "Bí thư Đảng ủy xã Vô Tranh",
+     "ns": "1979",
+     "tel": "0942024399",
+     "email": "",
+     "unit": "THƯỜNG TRỰC ĐẢNG ỦY XÃ VÔ TRANH",
+     "img": "img/canbo/cb00.jpg"
+    },
+    {
+     "name": "Nguyễn Thúy Hằng",
+     "chuc": "Phó Bí thư Thường trực Đảng ủy, Chủ tịch HĐND xã",
+     "ns": "1975",
+     "tel": "0386223999",
+     "email": "",
+     "unit": "THƯỜNG TRỰC ĐẢNG ỦY XÃ VÔ TRANH",
+     "img": "img/canbo/cb01.jpg"
+    },
+    {
+     "name": "Lương Xuân An",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Chủ nhiệm Ủy ban Kiểm tra Đảng ủy",
+     "ns": "1978",
+     "tel": "0387354662",
+     "email": "",
+     "unit": "ỦY BAN KIỂM TRA ĐẢNG ỦY",
+     "img": "img/canbo/cb04.png"
+    },
+    {
+     "name": "Nguyễn Thị Thu Hiền",
+     "chuc": "Ủy viên BTV Đảng ủy, Chánh Văn phòng Đảng ủy xã",
+     "ns": "1988",
+     "tel": "0334060188",
+     "email": "",
+     "unit": "VĂN PHÒNG ĐẢNG ỦY",
+     "img": "img/canbo/cb08.jpg"
+    },
+    {
+     "name": "Nịnh Văn Mạnh",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Chánh Văn phòng Đảng ủy xã",
+     "ns": "1984",
+     "tel": "0383432659",
+     "email": "",
+     "unit": "VĂN PHÒNG ĐẢNG ỦY",
+     "img": ""
+    },
+    {
+     "name": "Trần Hoàng Lan",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Trưởng ban xây dựng Đảng",
+     "ns": "",
+     "tel": "0965925522",
+     "email": "",
+     "unit": "BAN XÂY DỰNG ĐẢNG XÃ VÔ TRANH",
+     "img": "img/canbo/cb06.jpg"
+    },
+    {
+     "name": "Vương Thị Vân",
+     "chuc": "Ủy viên BTV Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra, Trưởng ban Kinh tế - Ngân sách",
+     "ns": "1977",
+     "tel": "0982742977",
+     "email": "",
+     "unit": "ỦY BAN KIỂM TRA ĐẢNG ỦY",
+     "img": "img/canbo/cb03.jpg"
+    },
+    {
+     "name": "Hoàng Xuân Thủy",
+     "chuc": "Phó Bí thư Đảng ủy, Chủ tịch Ủy ban nhân dân xã",
+     "ns": "1985",
+     "tel": "0989163555",
+     "email": "",
+     "unit": "THƯỜNG TRỰC ĐẢNG ỦY XÃ VÔ TRANH",
+     "img": "img/canbo/cb02.png"
+    },
+    {
+     "name": "Lưu Minh Vang",
+     "chuc": "Phó Chủ nhiệm Ủy ban Kiểm tra Đảng ủy",
+     "ns": "1979",
+     "tel": "0988591133",
+     "email": "",
+     "unit": "ỦY BAN KIỂM TRA ĐẢNG ỦY",
+     "img": "img/canbo/cb05.jpg"
+    },
+    {
+     "name": "Nguyễn Thị Mai",
+     "chuc": "Phó Trưởng ban xây dựng Đảng",
+     "ns": "1988",
+     "tel": "0943421988",
+     "email": "",
+     "unit": "BAN XÂY DỰNG ĐẢNG XÃ VÔ TRANH",
+     "img": "img/canbo/cb07.jpg"
+    },
+    {
+     "name": "Trịnh Thị Thu Hường",
+     "chuc": "Phó Chánh Văn phòng Đảng ủy xã",
+     "ns": "1985",
+     "tel": "0981160985",
+     "email": "",
+     "unit": "VĂN PHÒNG ĐẢNG ỦY",
+     "img": "img/canbo/cb09.jpg"
+    }
+   ]
+  },
+  {
+   "key": "hdnd",
+   "name": "HĐND xã",
+   "full": "Hội đồng nhân dân xã Vô Tranh",
+   "icon": "flag",
+   "units": [
+    "HỘI ĐỒNG NHÂN DÂN XÃ VÔ TRANH"
+   ],
+   "people": [
+    {
+     "name": "Nguyễn Thúy Hằng",
+     "chuc": "Phó Bí thư Thường trực Đảng ủy, Chủ tịch HĐND xã",
+     "ns": "1975",
+     "tel": "0386223999",
+     "email": "",
+     "unit": "HỘI ĐỒNG NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb10.jpg"
+    },
+    {
+     "name": "Nguyễn Tấn Tài",
+     "chuc": "Ủy viên BTV Đảng ủy, Phó Chủ tịch Hội đồng nhân dân xã",
+     "ns": "1980",
+     "tel": "0982774203",
+     "email": "",
+     "unit": "HỘI ĐỒNG NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb11.jpg"
+    },
+    {
+     "name": "Nguyễn Thị Tâm",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Trưởng ban Văn hóa - Xã hội",
+     "ns": "1982",
+     "tel": "0986222538",
+     "email": "",
+     "unit": "HỘI ĐỒNG NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb15.jpg"
+    },
+    {
+     "name": "Phan Thị Quyên",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Trưởng ban Kinh tế - Ngân sách",
+     "ns": "1979",
+     "tel": "0986139896",
+     "email": "",
+     "unit": "HỘI ĐỒNG NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb13.jpg"
+    },
+    {
+     "name": "Vương Thị Vân",
+     "chuc": "Ủy viên BTV Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra, Trưởng ban Kinh tế - Ngân sách",
+     "ns": "1977",
+     "tel": "0982742977",
+     "email": "",
+     "unit": "HỘI ĐỒNG NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb12.jpg"
+    },
+    {
+     "name": "Đỗ Quốc Hưng",
+     "chuc": "Ủy viên BTV Đảng ủy, Trưởng ban xây dựng Đảng, Trưởng ban Văn hóa - Xã hội",
+     "ns": "1985",
+     "tel": "0987123679",
+     "email": "",
+     "unit": "HỘI ĐỒNG NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb14.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ubnd",
+   "name": "UBND xã",
+   "full": "Ủy ban nhân dân xã Vô Tranh",
+   "icon": "building",
+   "units": [
+    "ỦY BAN NHÂN DÂN XÃ VÔ TRANH",
+    "VĂN PHÒNG HĐND&UBND",
+    "TRUNG TÂM PHỤC VỤ HÀNH CHÍNH CÔNG",
+    "PHÒNG KINH TẾ XÃ",
+    "PHÒNG VĂN HÓA, XÃ HỘI XÃ",
+    "TRUNG TÂM DỊCH VỤ TỔNG HỢP",
+    "PHÒNG XÂY DỰNG, NÔNG NGHIỆP VÀ MÔI TRƯỜNG"
+   ],
+   "people": [
+    {
+     "name": "Hoàng Xuân Thủy",
+     "chuc": "Phó Bí thư Đảng ủy, Chủ tịch Ủy ban nhân dân xã",
+     "ns": "1985",
+     "tel": "0989163555",
+     "email": "",
+     "unit": "ỦY BAN NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb16.png"
+    },
+    {
+     "name": "Bùi Phương Thảo",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó chủ tịch UBND xã",
+     "ns": "1976",
+     "tel": "0334929603",
+     "email": "",
+     "unit": "ỦY BAN NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb18.jpg"
+    },
+    {
+     "name": "Phạm Quang Lượng",
+     "chuc": "Ủy viên BTV Đảng ủy, Phó Chủ tịch Thường trực UBND xã",
+     "ns": "1982",
+     "tel": "0979829659",
+     "email": "",
+     "unit": "ỦY BAN NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb17.jpg"
+    },
+    {
+     "name": "Đồng Minh Ngọc",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó chủ tịch UBND xã",
+     "ns": "1985",
+     "tel": "0914668896",
+     "email": "",
+     "unit": "ỦY BAN NHÂN DÂN XÃ VÔ TRANH",
+     "img": "img/canbo/cb19.jpg"
+    },
+    {
+     "name": "Hồ Sỹ Hưng",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Chánh Văn phòng HĐND&UBND xã",
+     "ns": "1984",
+     "tel": "0982777076",
+     "email": "",
+     "unit": "VĂN PHÒNG HĐND&UBND",
+     "img": "img/canbo/cb20.jpg"
+    },
+    {
+     "name": "Lê Thị Hạnh",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Giám đốc Trung tâm Phục vụ hành chính công",
+     "ns": "1984",
+     "tel": "0986452215",
+     "email": "",
+     "unit": "TRUNG TÂM PHỤC VỤ HÀNH CHÍNH CÔNG",
+     "img": "img/canbo/cb27.jpg"
+    },
+    {
+     "name": "Lưu Trường Giang",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Chánh Văn phòng HĐND&UBND xã",
+     "ns": "1986",
+     "tel": "0979829866",
+     "email": "",
+     "unit": "VĂN PHÒNG HĐND&UBND",
+     "img": ""
+    },
+    {
+     "name": "Nguyễn Thị Như Quỳnh",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Trưởng Phòng Kinh tế xã",
+     "ns": "1986",
+     "tel": "0978297782",
+     "email": "",
+     "unit": "PHÒNG KINH TẾ XÃ",
+     "img": "img/canbo/cb21.jpg"
+    },
+    {
+     "name": "Nguyễn Thị Thúy",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Trưởng Phòng Văn hóa, Xã hội xã",
+     "ns": "1986",
+     "tel": "0986053206",
+     "email": "",
+     "unit": "PHÒNG VĂN HÓA, XÃ HỘI XÃ",
+     "img": "img/canbo/cb25.jpg"
+    },
+    {
+     "name": "Phạm Xuân Hưởng",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Giám đốc Trung tâm Dịch vụ tổng hợp xã",
+     "ns": "1988",
+     "tel": "0398153163",
+     "email": "",
+     "unit": "TRUNG TÂM DỊCH VỤ TỔNG HỢP",
+     "img": "img/canbo/cb28.jpg"
+    },
+    {
+     "name": "Lê Văn Hùng",
+     "chuc": "Phó Giám đốc Trung tâm Dịch vụ tổng hợp xã",
+     "ns": "1980",
+     "tel": "0972292755",
+     "email": "",
+     "unit": "TRUNG TÂM DỊCH VỤ TỔNG HỢP",
+     "img": "img/canbo/cb29.jpg"
+    },
+    {
+     "name": "Nguyễn Hoài",
+     "chuc": "Phó Giám đốc Trung tâm Dịch vụ tổng hợp xã",
+     "ns": "1987",
+     "tel": "0966343628",
+     "email": "",
+     "unit": "TRUNG TÂM DỊCH VỤ TỔNG HỢP",
+     "img": "img/canbo/cb30.jpg"
+    },
+    {
+     "name": "Nguyễn Thị Huệ",
+     "chuc": "Phó Trưởng Phòng Xây dựng, Nông nghiệp và Môi trường",
+     "ns": "1989",
+     "tel": "0982256174",
+     "email": "",
+     "unit": "PHÒNG XÂY DỰNG, NÔNG NGHIỆP VÀ MÔI TRƯỜNG",
+     "img": "img/canbo/cb24.jpg"
+    },
+    {
+     "name": "Phùng Thanh Hà",
+     "chuc": "Trưởng Phòng Xây dựng, Nông nghiệp và Môi trường",
+     "ns": "1976",
+     "tel": "0988412404",
+     "email": "",
+     "unit": "PHÒNG XÂY DỰNG, NÔNG NGHIỆP VÀ MÔI TRƯỜNG",
+     "img": "img/canbo/cb22.jpg"
+    },
+    {
+     "name": "Phạm Thành Công",
+     "chuc": "Phó Trưởng Phòng Xây dựng, Nông nghiệp và Môi trường",
+     "ns": "1984",
+     "tel": "0987709708",
+     "email": "",
+     "unit": "PHÒNG XÂY DỰNG, NÔNG NGHIỆP VÀ MÔI TRƯỜNG",
+     "img": "img/canbo/cb23.jpg"
+    },
+    {
+     "name": "Vũ Thị Hồng Hạnh",
+     "chuc": "Phó Trưởng Phòng Văn hóa, Xã hội xã",
+     "ns": "1975",
+     "tel": "0982774038",
+     "email": "",
+     "unit": "PHÒNG VĂN HÓA, XÃ HỘI XÃ",
+     "img": "img/canbo/cb26.jpg"
+    }
+   ]
+  },
+  {
+   "key": "mttq",
+   "name": "UBMTTQ xã",
+   "full": "Ủy ban MTTQ Việt Nam xã Vô Tranh",
+   "icon": "hands",
+   "units": [
+    "UBMTTQ XÃ VÔ TRANH"
+   ],
+   "people": [
+    {
+     "name": "Dương Thị Tịnh",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Chủ tịch UBMTTQ xã, Chủ tịch Hội LH Phụ nữ xã",
+     "ns": "1976",
+     "tel": "0352118965",
+     "email": "",
+     "unit": "UBMTTQ XÃ VÔ TRANH",
+     "img": "img/canbo/cb32.jpg"
+    },
+    {
+     "name": "Lưu Thị Thảo",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Phó Chủ tịch UBMTTQ xã, Bí thư Đoàn xã",
+     "ns": "1997",
+     "tel": "0962555997",
+     "email": "",
+     "unit": "UBMTTQ XÃ VÔ TRANH",
+     "img": "img/canbo/cb34.jpg"
+    },
+    {
+     "name": "Lê Minh Thảo",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Chủ tịch Hội Cựu chiến binh xã",
+     "ns": "1972",
+     "tel": "0948108287",
+     "email": "",
+     "unit": "UBMTTQ XÃ VÔ TRANH",
+     "img": "img/canbo/cb35.jpg"
+    },
+    {
+     "name": "Phạm Anh Tuấn",
+     "chuc": "Ủy viên BCH Đảng bộ xã, Chủ tịch Hội Nông dân xã",
+     "ns": "1978",
+     "tel": "0972751886",
+     "email": "",
+     "unit": "UBMTTQ XÃ VÔ TRANH",
+     "img": "img/canbo/cb33.jpg"
+    },
+    {
+     "name": "Vũ Văn Cử",
+     "chuc": "Ủy viên BTV Đảng ủy, Chủ tịch UBMTTQ xã",
+     "ns": "1976",
+     "tel": "0986836188",
+     "email": "",
+     "unit": "UBMTTQ XÃ VÔ TRANH",
+     "img": "img/canbo/cb31.jpg"
+    }
+   ]
+  }
+ ],
+ "updated": "26/11/2026"
+};
